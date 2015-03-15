@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width" />
+		<title>Angular Training Project</title>
+
+
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="js/vendor/modernizr.js"></script>
+
+
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+	</head>
+
+	<body>
+
+		
+
+		<!-- Content -->
+<section ui-view>
+    <div class="row">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div class="small-8 columns" ng-controller="authenticateController as vm">
+            <h3>Welcome to the Expense Tracker Angular Example App</h3>
+
+            <div class="panel large-12 large-centered medium-12 medium-centered small-12 small-centered columns">
+                <form name="welcomeForm" novalidate="novalidate" class="row">
+                    <h4 class="text-center">We will begin by entering the credentials</h4>
+                        <h5>Username: "James</h5>
+                        <h5>Password: "111"</h5>
+                    <div class="small-12 medium-offset-3 medium-6 columns">
+                        <input type="text" class="validation" placeholder="Username * " ng-model="name" tabindex="1" name="name" username required=""/>
+                        <span ng-show="welcomeForm.name.$pending.username">Checking for valid User...</span>
+                        <span ng-show="welcomeForm.name.$error.username">User is invalid</span>
+                    </div>
+                    <div class="small-12 medium-offset-3 medium-6 columns">
+                        <input type="password" class="validation" placeholder="Password * " ng-model="vm.password" tabindex="2" required=""/>
+                        <span ng-show="welcomeForm.vm.password.$error">Wrong Password, did you read the instructions?</span>
+                    </div>
+                    <div class="small-12 columns text-center">
+                        <button tabindex="2" ng-disabled="welcomeForm.$invalid" class="button small" ng-click="vm.getStarted()">Let's Begin</button>
+                    </div>
+                </form>
+                <p> Or see the Project <a href="styleguide.html">Style Guide</a></p>
+            </div>
+
+        </div>
+
+        <div class="small-4 columns">
+
+          
+				<!-- Sidebar Intro -->
+				
+				<!-- Widget Intro -->
+				<p><a href="/">Application</a>
+					<br />
+					Project Application.</p>
+
+				<h4>Getting Started</h4>
+				<p>We're stoked you want to try Foundation! To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+				<!-- /Widget Intro -->
+				<!-- /Sidebar Intro -->
+
+        </div>
+    </div>
+</section>
+<!-- Content -->
+
+		
+		<!-- Footer -->
+		<footer>
+			<div class="row">
+				<div class="large-12 columns">
+					
+				</div>
+			</div>
+		</footer>
+		<!-- /Footer -->
+
+
+
+		<script src="js/vendor/jquery.js"></script>
+		<script src="js/vendor/foundation.js"></script>
+		<script src="js/vendor/angular.js"></script>
+    <script src="js/vendor/angular-sanitize.js"></script>
+		<script src="js/vendor/angular-ui-router.js"></script>
+    <script src="js/vendor/mm-foundation-tpls.js"></script>
+    <script src="js/vendor/highcharts.src.js"></script>
+    <script src="js/vendor/highcharts-ng.js"></script>
+    <script src="js/vendor/select.js"></script>
+    <script src="expense-tracker/app.module.js"></script>
+    <script src="expense-tracker/directives/customSelect.directive.js"></script>
+    <script src="expense-tracker/directives/usernameCheck.directive.js"></script>
+    <script src="expense-tracker/controllers/authenticate.controller.js"></script>
+    <script src="expense-tracker/controllers/customers.controller.js"></script>
+    <script src="expense-tracker/controllers/sidebar.controller.js"></script>
+    <script src="expense-tracker/controllers/hero.controller.js"></script>
+    <script src="expense-tracker/controllers/points.controller.js"></script>
+    <script src="expense-tracker/controllers/statementOverview.controller.js"></script>
+    <script src="expense-tracker/services/customers.service.js"></script>
+    <script src="expense-tracker/services/transactions.service.js"></script>
+
+
+
+
+
+
+		<script src="/js/app.custom.js"></script>
+
+
+    <script>
+        window.baseUrl = '';
+        angular.module('siteSettings', []).constant("siteSettings", {
+            BaseUrl: ''
+        });
+        try {
+            angular.bootstrap(document, ['expenseTracker']);
+        } catch (e) {
+            console.error(e.stack || e.message || e);
+        }
+    </script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+
+<!-- Content -->
+
+    <div class="row bg-header">
+        <div class="small-8 columns content">
+            <div class="header" ng-include="'expense-tracker/partials/header.html'"></div>
+            <div class="hero">
+                <div class="row" ng-include="'expense-tracker/partials/hero.html'"></div>
+            </div>
+
+            <div class="overview" ng-include="'expense-tracker/partials/statement-overview.html'"></div>
+        </div>
+
+        <div class="small-3 columns sidebar" ng-controller="sidebarController as vm">
+            <div class="small-12 columns" ng-include="'expense-tracker/partials/widget-cards.html'"></div>
+            <ul class="pricing-table custom summary" ng-include="'expense-tracker/partials/widget-summary.html'"></ul>
+            <ul class="pricing-table custom offers" ng-include="'expense-tracker/partials/widget-offers.html'"></ul>
+            <ul class="pricing-table custom points" ng-include="'expense-tracker/partials/widget-points.html'" ng-controller="pointsController as vm"></ul>
+        </div>
+    </div>
+
+<!-- Content -->

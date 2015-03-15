@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+C:\Dev\GitHub\Tekzenit\CapAngularTrainingV1\.metadata\.plugins\org.eclipse.jdt.core
+3287091533.index

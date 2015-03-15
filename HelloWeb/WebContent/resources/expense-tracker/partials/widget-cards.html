@@ -1,0 +1,9 @@
+
+				<!-- Widget Cards -->
+				<div class="small-12 columns">
+            		<custom-select placeholder="Switch Cards" list="vm.creditcards" selected="vm.item"></custom-select>
+					<h3 class="color-white">Good morning, {{vm.customers.firstName}}</h3>
+					<h4 class="color-white">member since 2014</h4>
+					<p class="color-white">Venture Membership Points<br/>(Card ending in  {{vm.creditcard.number | limitTo:4:end}})</p>
+				</div>
+				<!-- /Widget Cards -->

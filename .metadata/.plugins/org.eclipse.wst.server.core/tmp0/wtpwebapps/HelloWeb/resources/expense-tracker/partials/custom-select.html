@@ -1,0 +1,23 @@
+<div class="custom-select-container" ng-class="{ show: listVisible }">
+	<div class="custom-select-display" ng-click="show();" ng-class="{ clicked: listVisible }">
+		<p class="small-7">
+			<img ng-if="!isPlaceholder" ng-src="dist/images/{{display.image}}">
+		</p>
+		<p class="small-5">
+			<span class="placeholder color-white down">{{placeholder}}</span>
+		</p>
+	</div>
+	<div class="custom-select-list">
+		<div>
+			<h5 class="small-12 columns color-primary up">Switch Cards:</h5>
+			<div ng-repeat="item in list" ng-click="select(item)" ng-init="select(list[0])" ng-class="{ selected: isSelected(item) }">
+				<p class="small-7 columns">
+					<img ng-src="dist/images/{{item.image}}"/>
+				</p>
+				<p class="small-5 columns">
+					Ending<br />...{{item.number | limitTo:4:end }}
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width" />
+		<title>Angular Training Project</title>
+
+
+		<link rel="stylesheet" href="/css/main.css" />
+		<script src="/js/vendor/modernizr.js"></script>
+
+
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+	</head>
+
+	<body>
+
+		
+
+		<!-- Content -->
+<section ui-view>
+    <div class="row bg-header">
+        <div class="small-8 columns content">
+            <div class="header">
+
+                
+		<!-- Header -->
+			<a href="" class="home left"></a>
+			
+				<!-- Nav Header -->
+					<ul class="inline-list right">
+						<li><a href="" class="active">Overview</a></li>
+						<li><a href="">Profile</a></li>
+						<li><a href="">Settings</a></li>
+					</ul>
+				<!-- /Nav Header -->
+		<!-- /Header -->
+
+
+            </div>
+            <div class="hero">
+
+                
+                <!-- Hero -->
+            <div class="row">
+                <div class="small-12 columns">
+                    <h4 class="color-white">Your expense tracker</h4>
+                    <a href="#" class="button small">March 2015</a>
+                    <a href="#" class="button small">vs Feb</a>
+                    <div class="right">
+                        <a href="#" class="button small">Week</a>
+                        <a href="#" class="button small">Month</a>
+                        <a href="#" class="button small">Year</a>
+                    </div>
+                <img src="http://placehold.it/738x349&text=chart+placholder" />
+                </div>
+            </div>
+                <!-- /Hero -->
+
+
+            </div>
+
+            <div class="">
+                <h4 class="content">Overview
+                    <span class="right">Statement Total 
+                        <span class="price">$1,288.21</span>
+                    </span>
+                </h4>
+
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="left">
+                            <a href="#" class="button small">Categories</a>
+                            <a href="#" class="button small">Transactions</a>
+                            <a href="#" class="button small">Budgets</a>
+                        </div>
+                        <div class="right">
+                            <a href="#" class="underline">View Balance Details</a>
+                            <a href="#" class="button success small">Make a Payment</a>
+                        </div>
+                        <img src="http://placehold.it/738x624&text=table+placholder" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="small-3 columns sidebar">
+
+            
+				<!-- Sidebar -->
+				
+				<!-- Widget Cards -->
+				<div class="small-12 columns">
+					<div class="small-12 columns">
+						<div class="row">
+							<p class="small-7 columns">
+								<img src="http://placehold.it/200x125&text=card"/>
+							</p>
+							<p class="small-5 columns">
+								<a href="" dropdown-toggle="#dropdown-cards" class="color-white">Select Card</a>
+							</p>
+							<ul id="dropdown-cards" class="f-dropdown">
+							  <li ng-repeat="choice in items">
+							    <a></a>
+							  </li>
+							</ul>
+						</div>
+						<h3 class="color-white">Good morning, trevor</h3>
+						<h4 class="color-white">member since 2014</h4>
+						<p class="color-white">Venture Membership Points<br/>(Card ending in 7709)</p>
+					</div>
+				</div>
+				<!-- /Widget Cards -->
+				
+				<!-- Widget Summary -->
+				<ul class="pricing-table custom">
+					<li class="title text-left">
+						Balance Summary
+					</li>
+					<li class="description text-left">
+						<p class="small-12">Current Balance<span class="amount right">$1,288<sup>21</sup><span></p>
+						<p class="small-12">Previous Statement<span class="amount right">$2,802<sup>72</sup><span></p>
+					</li>
+					<li class="cta-button">
+						<a href="#" class="small success button">Make a Payment</a>
+					</li>
+				</ul>
+				<!-- /Widget Summary -->
+				
+				<!-- Widget Offers -->
+				<ul class="pricing-table custom">
+					<li class="title text-left">
+						Special Offers
+					</li>
+					<li class="description text-left">
+						<a href="">Save $100 when you spend $250 at home depot</a>
+					</li>
+					<li class="description text-left">
+						<a href="">Get 2x points on Travel with AA</a>
+					</li>
+					<li class="description text-left">
+						<a href="">Use your points on Airbnb stays</a>
+					</li>
+				</ul>
+				<!-- /Widget Offers -->
+				
+				<!-- Widget Points -->
+				<ul class="pricing-table custom">
+					<li class="title text-left">
+						Bonus Points Tracker
+					</li>
+					<li class="description">
+						<p class="small-12"><img src="http://placehold.it/200/200"/></p>
+						<p class="small-12">You are only $132 away from earning 2x points.</p>
+					</li>
+					<li class="description text-left">
+						<p class="small-12">Current Balance<span class="amount right">$1,288<sup>21</sup><span></p>
+						<p class="small-12">Previous Statement<span class="amount right">$2,802<sup>72</sup><span></p>
+						<p class="small-12 text-center"><a class="underline" href="">See Your Points Rewards</a></p>
+					</li>
+				</ul>
+				<!-- /Widget Points -->
+				<!-- /Sidebar -->
+
+        </div>
+    </div>
+</section>
+		<!-- Content -->
+
+		
+		<!-- Footer -->
+		<footer>
+			<div class="row">
+				<div class="large-12 columns">
+					
+				</div>
+			</div>
+		</footer>
+		<!-- /Footer -->
+
+
+
+		<script src="/js/vendor/jquery.js"></script>
+		<script src="/js/vendor/foundation.js"></script>
+		<script src="/js/vendor/angular.js"></script>
+    <script src="/js/vendor/angular-sanitize.js"></script>
+		<script src="/js/vendor/angular-ui-router.js"></script>
+    <script src="/js/vendor/mm-foundation-tpls.js"></script>
+    <script src="/js/vendor/highcharts.src.js"></script>
+    <script src="/js/vendor/highcharts-ng.js"></script>
+    <script src="/js/vendor/select.js"></script>
+    <script src="/expense-tracker/app.module.js"></script>
+    <script src="/expense-tracker/directives/customSelect.directive.js"></script>
+    <script src="/expense-tracker/directives/usernameCheck.directive.js"></script>
+    <script src="/expense-tracker/controllers/authenticate.controller.js"></script>
+    <script src="/expense-tracker/controllers/customers.controller.js"></script>
+    <script src="/expense-tracker/controllers/sidebar.controller.js"></script>
+    <script src="/expense-tracker/controllers/hero.controller.js"></script>
+    <script src="/expense-tracker/controllers/points.controller.js"></script>
+    <script src="/expense-tracker/controllers/statementOverview.controller.js"></script>
+    <script src="/expense-tracker/services/customers.service.js"></script>
+    <script src="/expense-tracker/services/transactions.service.js"></script>
+
+
+
+
+
+
+		<script src="/js/app.custom.js"></script>
+
+
+    <script>
+        window.baseUrl = '';
+        angular.module('siteSettings', []).constant("siteSettings", {
+            BaseUrl: ''
+        });
+        try {
+            angular.bootstrap(document, ['expenseTracker']);
+        } catch (e) {
+            console.error(e.stack || e.message || e);
+        }
+    </script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

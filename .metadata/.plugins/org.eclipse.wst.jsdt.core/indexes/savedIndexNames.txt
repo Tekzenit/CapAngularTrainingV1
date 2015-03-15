@@ -1,0 +1,10 @@
+INDEX VERSION 1.3+C:\Dev\GitHub\Tekzenit\CapAngularTrainingV1\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3505638254.index
+1510905083.index
+1925910606.index
+3287091533.index
+463375423.index
+802687102.index
+1881718614.index
+4288710538.index
+2522725888.index
