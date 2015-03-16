@@ -1,0 +1,41 @@
+<!-- transactions -->
+    <table ng-table="tableParams" class="table small-12 ">
+        <tr ng-repeat="transaction in $data">
+            <td data-title="'Description'">
+                <span ng-if="!transaction.$edit">{{transaction.description}}</span>
+
+                <div ng-if="transaction.$edit"><input class="form-control" type="text" ng-model="transaction.description"/></div>
+            </td>
+            <td data-title="'Date'" width="200">
+                <span ng-if="!transaction.$edit">{{transaction.date | date : format : short  }}</span>
+
+                <div ng-if="transaction.$edit"><input class="form-control" type="text" ng-model="transaction.date"/></div>
+            </td>
+            <td data-title="'Category'" width="200">
+                <span ng-if="!transaction.$edit">{{transaction.category }}</span>
+
+                <div ng-if="transaction.$edit">
+                    <select class="form-control" type="text" ng-model="transaction.category">
+                        <option value="Rent">Rent</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Night Life">Night Life</option>
+                        <option value="Gas and Car">Gas and Car</option>
+                        <option value="Restaurants">Restaurants</option>
+                        <option value="Travel">Travel</option>
+                    </select>
+                </div>
+                <!--<div ng-if="transaction.$edit"><input class="form-control" type="text" ng-model="transaction.category"/></div>-->
+            </td>
+            <td data-title="'Amount'" width="200">
+                <span ng-if="!transaction.$edit">{{transaction.amount | currency  }}</span>
+                <span ng-if="transaction.$edit">{{transaction.amount | currency  }}</span>
+            </td>
+            <td data-title="'Actions'" width="200">
+                <a ng-if="!transaction.$edit" href="" class="btn btn-default btn-xs" ng-click="transaction.$edit = true">Edit</a>
+                <a ng-if="transaction.$edit" href="" class="btn btn-primary btn-xs" ng-click="transaction.$edit = false">Save</a>
+            </td>
+        </tr>
+    </table>
+<!-- /transactions -->

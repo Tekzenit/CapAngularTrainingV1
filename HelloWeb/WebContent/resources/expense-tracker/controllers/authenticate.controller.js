@@ -1,19 +1,20 @@
 (function() {
 
-  var injectParams = ['$state'];
-  var AuthenticateController = function($state) {
+  var injectParams = ['$state','authenticationService'];
+  var AuthenticateController = function($state, authenticationService) {
     var vm = this;
-    vm.password = null;
-    vm.disabled = function () {
-      (vm.password !== '111') ? $error : $valid;
-    };
-    vm.getStarted = function () {
-      $state.go('expenseTracker');
-    };
-
-    //function init() {
-    //}
-    //init();
+    vm.username = '';
+    vm.password = '';
+    vm.login = function() {
+      authenticationService.loginUser(vm.username, vm.password).then(
+        function (loginResult) {
+           $state.go('expenseTracker');
+        },
+        function (err) {
+          console.error(err);
+        }
+      );
+    }
   };
 
 
@@ -23,3 +24,4 @@
     .controller('authenticateController', AuthenticateController);
 
 })();
+

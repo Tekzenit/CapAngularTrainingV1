@@ -23,50 +23,50 @@
 
 		<!-- Content -->
 <section ui-view>
-    <div class="row">
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+    <div class="row bg-header">
+        <div class="small-8 columns content" ng-controller="authenticateController as vm">
+            <div class="header" ng-include="'expense-tracker/partials/header.html'"></div>
+            <div class="hero">
+                <h3 class="color-white title">Welcome to the Expense Tracker Angular Training App</h3>
 
-        <div class="small-8 columns" ng-controller="authenticateController as vm">
-            <h3>Welcome to the Expense Tracker Angular Example App</h3>
-
-            <div class="panel large-12 large-centered medium-12 medium-centered small-12 small-centered columns">
-                <form name="welcomeForm" novalidate="novalidate" class="row">
-                    <h4 class="text-center">We will begin by entering the credentials</h4>
-                        <h5>Username: "James</h5>
-                        <h5>Password: "111"</h5>
-                    <div class="small-12 medium-offset-3 medium-6 columns">
-                        <input type="text" class="validation" placeholder="Username * " ng-model="name" tabindex="1" name="name" username required=""/>
-                        <span ng-show="welcomeForm.name.$pending.username">Checking for valid User...</span>
-                        <span ng-show="welcomeForm.name.$error.username">User is invalid</span>
-                    </div>
-                    <div class="small-12 medium-offset-3 medium-6 columns">
-                        <input type="password" class="validation" placeholder="Password * " ng-model="vm.password" tabindex="2" required=""/>
-                        <span ng-show="welcomeForm.vm.password.$error">Wrong Password, did you read the instructions?</span>
-                    </div>
-                    <div class="small-12 columns text-center">
-                        <button tabindex="2" ng-disabled="welcomeForm.$invalid" class="button small" ng-click="vm.getStarted()">Let's Begin</button>
-                    </div>
-                </form>
-                <p> Or see the Project <a href="styleguide.html">Style Guide</a></p>
+                <div class="panel large-12 large-centered medium-12 medium-centered small-12 small-centered columns">
+                    <form name="welcomeForm" novalidate="novalidate" class="row">
+                        <h4 class="text-center">We will begin by entering the credentials</h4>
+                            <h5>Username: "James</h5>
+                            <h5>Password: "111"</h5>
+                        <div class="small-12 medium-offset-3 medium-6 columns">
+                            <input type="text" class="validation" placeholder="Username * " ng-model="vm.username" usernamecheck tabindex="1"
+                                   name="username" required=""/>
+                            <span ng-show="welcomeForm.username.usernamecheck.$pending">Checking for valid User...</span>
+                            <span ng-show="welcomeForm.username.usernamecheck.$error">User is invalid</span>
+                        </div>
+                        <div class="small-12 medium-offset-3 medium-6 columns">
+                            <input type="password" class="validation" placeholder="Password * " ng-model="vm.password"
+                                   paswwordcheck
+                                   name="password" tabindex="2" required=""/>
+                            <span ng-show="welcomeForm.password.paswwordcheck.$pending">Checking for valid Password...</span>
+                            <span ng-show="welcomeForm.password.paswwordcheck.$error">Wrong Password, did you read the instructions?</span>
+                        </div>
+                        <div class="small-12 columns text-center">
+                            <button tabindex="2" ng-disabled="welcomeForm.$invalid" class="button small" ng-click="vm.login()">Let's Begin</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </div>
 
-        <div class="small-4 columns">
+        <div class="small-4 columns sidebar intro">
 
           
 				<!-- Sidebar Intro -->
 				
 				<!-- Widget Intro -->
-				<p><a href="/">Application</a>
-					<br />
-					Project Application.</p>
-
-				<h4>Getting Started</h4>
-				<p>We're stoked you want to try Foundation! To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+				<div class="panel">
+					<h4>Getting Started</h4>
+					<p>We've used Zurb's Foundation for the front end!</p>
+					<p>Documentation: <a href="http://foundation.zurb.com/docs/" class="h6" target="_blank">http://foundation.zurb.com/docs/</a>.</p>
+				</div>
 				<!-- /Widget Intro -->
 				<!-- /Sidebar Intro -->
 
@@ -88,34 +88,33 @@
 
 
 
-		<script src="/js/vendor/jquery.js"></script>
-		<script src="/js/vendor/foundation.js"></script>
-		<script src="/js/vendor/angular.js"></script>
-    <script src="/js/vendor/angular-sanitize.js"></script>
-		<script src="/js/vendor/angular-ui-router.js"></script>
-    <script src="/js/vendor/mm-foundation-tpls.js"></script>
-    <script src="/js/vendor/highcharts.src.js"></script>
-    <script src="/js/vendor/highcharts-ng.js"></script>
-    <script src="/js/vendor/select.js"></script>
-    <script src="/expense-tracker/app.module.js"></script>
-    <script src="/expense-tracker/directives/customSelect.directive.js"></script>
-    <script src="/expense-tracker/directives/usernameCheck.directive.js"></script>
-    <script src="/expense-tracker/controllers/authenticate.controller.js"></script>
-    <script src="/expense-tracker/controllers/customers.controller.js"></script>
-    <script src="/expense-tracker/controllers/sidebar.controller.js"></script>
-    <script src="/expense-tracker/controllers/hero.controller.js"></script>
-    <script src="/expense-tracker/controllers/points.controller.js"></script>
-    <script src="/expense-tracker/controllers/statementOverview.controller.js"></script>
-    <script src="/expense-tracker/services/customers.service.js"></script>
-    <script src="/expense-tracker/services/transactions.service.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/vendor/angular.js"></script>
+    <script src="js/vendor/angular-resource.js"></script>
+    <script src="js/vendor/angular-sanitize.js"></script>
+    <script src="js/vendor/angular-ui-router.js"></script>
+    <script src="js/vendor/ng-table.js"></script>
+    <script src="js/vendor/mm-foundation-tpls.js"></script>
+    <script src="js/vendor/highcharts.src.js"></script>
+    <script src="js/vendor/highcharts-ng.js"></script>
+    <script src="js/vendor/select.js"></script>
 
 
+    <script src="expense-tracker/app.module.js"></script>
+    <script src="expense-tracker/directives/customSelect.directive.js"></script>
+    <script src="expense-tracker/directives/valueCheck.directive.js"></script>
+    <script src="expense-tracker/controllers/authenticate.controller.js"></script>
 
+    <script src="expense-tracker/controllers/sidebar.controller.js"></script>
+    <script src="expense-tracker/controllers/hero.controller.js"></script>
+    <script src="expense-tracker/controllers/points.controller.js"></script>
+    <script src="expense-tracker/controllers/statementOverview.controller.js"></script>
+    <script src="expense-tracker/services/authentication.service.js"></script>
+    <script src="expense-tracker/services/customers.service.js"></script>
+    <script src="expense-tracker/services/transactions.service.js"></script>
 
-
-
-		<script src="/js/app.custom.js"></script>
-
+	<script src="js/app.custom.js"></script>
 
     <script>
         window.baseUrl = '';

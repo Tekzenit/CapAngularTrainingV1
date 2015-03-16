@@ -1,18 +1,24 @@
 (function () {
 
-  var app = angular.module('expenseTracker', ['ui.router','mm.foundation','highcharts-ng']);
+  var app = angular.module('expenseTracker', ['ngResource','ui.router','mm.foundation','highcharts-ng','ngTable']);
 
-  app.run(function ($rootScope) {
+  app.run(function ($rootScope, $state, $stateParams) {
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
+
     angular.element(document).on("click", function(e) {
       $rootScope.$broadcast("documentClicked", angular.element(e.target));
     });
   });
 
+  app.config(function ($urlRouterProvider, $stateProvider) {
 
-  app.config(function ($stateProvider) {
+    $urlRouterProvider
+      //.when('/transactions?id', '/transactions/:id')
+      // if invalid url go to root /
+      .otherwise('/');
     var viewBase = 'expense-tracker/views/';
     var partialViewBase = 'expense-tracker/partials/';
-
     $stateProvider
     .state('expenseTracker', {
       url: '/ExpenseTracker',

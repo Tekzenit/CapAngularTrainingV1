@@ -15,6 +15,7 @@
    
    <mvc:resources mapping="/**" location="/resources/" />
    
+    
    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
        <property name="prefix">
                   <value>/WEB-INF/jsp/</value>

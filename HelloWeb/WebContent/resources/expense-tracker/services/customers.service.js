@@ -1,17 +1,14 @@
-(function() {
+(function () {
 
-    var injectParams = ['$http'];
-    var customersService = function($http) {
-        var service = this;
-        service.getCustomers = function(customerId) {
-            return $http.get('http://localhost:9091/customers/'+(customerId || '') );
-        };
-    };
+  var injectParams = ['$resource'];
+  var CustomersServive = function ($resource) {
+    return $resource('http://localhost:9092/customers/:id/',{id: '@_id'},{})
+  };
 
-    customersService.$inject = injectParams;
+  CustomersServive.$inject = injectParams;
 
-    angular.module('expenseTracker')
-        .service('customersService', customersService);
+  angular.module('expenseTracker')
+    .factory('customersService', CustomersServive);
 
 })();
 

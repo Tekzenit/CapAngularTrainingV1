@@ -10,7 +10,10 @@
 				selected: "="
 			},
 			link: function(scope) {
-				scope.listVisible = false;
+				scope.init = function () {
+         sharedDataService.setCreditcard(value);
+        };
+        scope.listVisible = false;
 				scope.isPlaceholder = true;
 
 				scope.select = function(item) {

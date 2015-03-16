@@ -8,7 +8,7 @@
                 <div class="row" ng-include="'expense-tracker/partials/hero.html'"></div>
             </div>
 
-            <div class="overview" ng-include="'expense-tracker/partials/statement-overview.html'"></div>
+            <div class="overview" ng-include="'expense-tracker/partials/statement-overview.html'" ng-controller="statementOverViewController as vm"></div>
         </div>
 
         <div class="small-3 columns sidebar" ng-controller="sidebarController as vm">
