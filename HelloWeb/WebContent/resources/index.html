@@ -24,8 +24,8 @@
 		<!-- Content -->
 <section ui-view>
     <div class="row bg-header">
-        <div class="small-8 columns content" ng-controller="authenticateController as vm">
-            <div class="header" ng-include="'expense-tracker/partials/header.html'"></div>
+        <div class="small-8 columns content">
+            <div class="header"></div>
             <div class="hero">
                 <h3 class="color-white title">Welcome to the Expense Tracker Angular Training App</h3>
 
@@ -35,20 +35,19 @@
                             <h5>Username: "James</h5>
                             <h5>Password: "111"</h5>
                         <div class="small-12 medium-offset-3 medium-6 columns">
-                            <input type="text" class="validation" placeholder="Username * " ng-model="vm.username" usernamecheck tabindex="1"
+                            <input type="text" class="validation" placeholder="Username * " tabindex="1"
                                    name="username" required=""/>
-                            <span ng-show="welcomeForm.username.usernamecheck.$pending">Checking for valid User...</span>
-                            <span ng-show="welcomeForm.username.usernamecheck.$error">User is invalid</span>
+                            <span >Checking for valid User...</span>
+                            <span >User is invalid</span>
                         </div>
                         <div class="small-12 medium-offset-3 medium-6 columns">
-                            <input type="password" class="validation" placeholder="Password * " ng-model="vm.password"
-                                   paswwordcheck
+                            <input type="password" class="validation" placeholder="Password * "
                                    name="password" tabindex="2" required=""/>
-                            <span ng-show="welcomeForm.password.paswwordcheck.$pending">Checking for valid Password...</span>
-                            <span ng-show="welcomeForm.password.paswwordcheck.$error">Wrong Password, did you read the instructions?</span>
+                            <span >Checking for valid Password...</span>
+                            <span >Wrong Password, did you read the instructions?</span>
                         </div>
                         <div class="small-12 columns text-center">
-                            <button tabindex="2" ng-disabled="welcomeForm.$invalid" class="button small" ng-click="vm.login()">Let's Begin</button>
+                            <button tabindex="2" class="button small" >Let's Begin</button>
                         </div>
                     </form>
                 </div>
