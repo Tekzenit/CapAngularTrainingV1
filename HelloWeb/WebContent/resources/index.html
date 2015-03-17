@@ -101,25 +101,14 @@
 
 
     <script src="expense-tracker/app.module.js"></script>
-    <script src="expense-tracker/directives/customSelect.directive.js"></script>
-    <script src="expense-tracker/directives/valueCheck.directive.js"></script>
     <script src="expense-tracker/controllers/authenticate.controller.js"></script>
-
     <script src="expense-tracker/controllers/sidebar.controller.js"></script>
-    <script src="expense-tracker/controllers/hero.controller.js"></script>
-    <script src="expense-tracker/controllers/points.controller.js"></script>
-    <script src="expense-tracker/controllers/statementOverview.controller.js"></script>
     <script src="expense-tracker/services/authentication.service.js"></script>
     <script src="expense-tracker/services/customers.service.js"></script>
-    <script src="expense-tracker/services/transactions.service.js"></script>
 
 	<script src="js/app.custom.js"></script>
 
     <script>
-        window.baseUrl = '';
-        angular.module('siteSettings', []).constant("siteSettings", {
-            BaseUrl: ''
-        });
         try {
             angular.bootstrap(document, ['expenseTracker']);
         } catch (e) {

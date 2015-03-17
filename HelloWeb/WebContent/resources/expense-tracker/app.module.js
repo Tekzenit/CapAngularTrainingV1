@@ -2,14 +2,6 @@
 
   var app = angular.module('expenseTracker', ['ngResource','ui.router','mm.foundation','highcharts-ng','ngTable']);
 
-  app.run(function ($rootScope, $state, $stateParams) {
-    $rootScope.$state = $state;
-    $rootScope.$stateParams = $stateParams;
-
-    angular.element(document).on("click", function(e) {
-      $rootScope.$broadcast("documentClicked", angular.element(e.target));
-    });
-  });
 
   app.config(function ($urlRouterProvider, $stateProvider) {
 
@@ -37,16 +29,6 @@
       templateUrl: partialViewBase+'statement-overview-transactions.html'
     });
   });
- app.factory('sharedDataService', function(){
-
-   var creditcard = {};
-   return {
-    getCreditcard: function() {
-     return creditcard;
-    },
-    setCreditcard: function (value) {
-     creditcard = value;
-    }
-   };
+ 
  });
 })();
