@@ -5,16 +5,12 @@
     var vm = this;
     vm.username = '';
     vm.password = '';
-    vm.login = function() {
-      authenticationService.loginUser(vm.username, vm.password).then(
-        function (loginResult) {
-           $state.go('expenseTracker');
-        },
-        function (err) {
-          console.error(err);
-        }
-      );
+    vm.submitted = false;
+    vm.login = function () {
+      if (authenticationService.loginUser(vm.username, vm.password))
+        $state.go('expenseTracker');
     }
+
   };
 
 

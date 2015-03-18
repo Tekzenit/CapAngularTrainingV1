@@ -24,31 +24,33 @@
 		<!-- Content -->
 <section ui-view>
     <div class="row bg-header">
-        <div class="small-8 columns content" ng-controller="authenticateController as vm">
+        <div class="small-8 columns content">
             <div class="header" ng-include="'expense-tracker/partials/header.html'"></div>
             <div class="hero">
                 <h3 class="color-white title">Welcome to the Expense Tracker Angular Training App</h3>
 
-                <div class="panel large-12 large-centered medium-12 medium-centered small-12 small-centered columns">
-                    <form name="welcomeForm" novalidate="novalidate" class="row">
+                <div class="panel large-12 large-centered medium-12 medium-centered small-12 small-centered columns"
+                     ng-controller="authenticateController as vm">
+                    <form name="welcomeForm" novalidate="novalidate" class="row" ng-submit="vm.login()">
                         <h4 class="text-center">We will begin by entering the credentials</h4>
                             <h5>Username: "James</h5>
                             <h5>Password: "111"</h5>
                         <div class="small-12 medium-offset-3 medium-6 columns">
                             <input type="text" class="validation" placeholder="Username * " ng-model="vm.username" usernamecheck tabindex="1"
-                                   name="username" required=""/>
-                            <span ng-show="welcomeForm.username.usernamecheck.$pending">Checking for valid User...</span>
-                            <span ng-show="welcomeForm.username.usernamecheck.$error">User is invalid</span>
+                                   name="username" required=""/>{{user.username}}
+                            <!--<span ng-show="welcomeForm.username.usernamecheck.$pending">Checking for valid User...</span>-->
+                            <span ng-show="welcomeForm.username.$dirty && welcomeForm.username.$invalid">User is invalid</span>
+                            <span ng-show="welcomeForm.username.$dirty.$error.required">Username is required</span>
                         </div>
                         <div class="small-12 medium-offset-3 medium-6 columns">
                             <input type="password" class="validation" placeholder="Password * " ng-model="vm.password"
                                    paswwordcheck
                                    name="password" tabindex="2" required=""/>
-                            <span ng-show="welcomeForm.password.paswwordcheck.$pending">Checking for valid Password...</span>
-                            <span ng-show="welcomeForm.password.paswwordcheck.$error">Wrong Password, did you read the instructions?</span>
+                            <span ng-show="welcomeForm.password.$dirty && welcomeForm.username.$invalid">Password is invalid</span>
+                            <span ng-show="welcomeForm.password.$dirty.$error.required">Wrong Password, did you read the instructions?</span>
                         </div>
                         <div class="small-12 columns text-center">
-                            <button tabindex="2" ng-disabled="welcomeForm.$invalid" class="button small" ng-click="vm.login()">Let's Begin</button>
+                            <input type="submit" ng-disabled="welcomeForm.$invalid" tabindex="3" class="button small" value="Let's Begin"/>
                         </div>
                     </form>
                 </div>

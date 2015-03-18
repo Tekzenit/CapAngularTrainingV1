@@ -1,6 +1,6 @@
 (function() {
 
-    var injectParams = ['transactionsService', 'customersService'];
+    var injectParams = [];
     var PointsController = function() {
         var vm = this;
         vm.loading = true;

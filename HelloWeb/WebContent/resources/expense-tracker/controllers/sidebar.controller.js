@@ -10,14 +10,14 @@
     var customer = customersService.get({id: customerId}, function () {
       vm.customer = customer;
       vm.creditcards = customer.creditcards;
-      vm.creditcard = customer.creditcards.number;
+
     });
     vm.customers = customersService.query();
 
     $scope.$watch(function () {
       return sharedDataService.getCreditcard();
-    }, function (newValue, oldValue) {
-      vm.creditcard = newValue;
+    }, function (value) {
+      vm.creditcard = value;
     });
 
   };
