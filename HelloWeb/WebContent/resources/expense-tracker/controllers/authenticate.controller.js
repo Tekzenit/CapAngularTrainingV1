@@ -7,8 +7,12 @@
     vm.password = '';
     vm.submitted = false;
     vm.login = function () {
-      if (authenticationService.loginUser(vm.username, vm.password))
-        $state.go('expenseTracker');
+    	authenticationService.loginUser(vm.username, vm.password)
+    	.then(function() {
+    		$state.go('expenseTracker');
+    	});
+    	//if (authenticationService.loginUser(vm.username, vm.password))
+      //  $state.go('expenseTracker');
     }
 
   };

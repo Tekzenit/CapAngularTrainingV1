@@ -9,8 +9,7 @@
 	  var tranService = {
 		  		  
 		  GetTransactionByCreditCard : function(cardId) {
-			  transactionResource =
-				  $resource('http://localhost:9092/transactions/:ccId/', {ccId: '@_cardId'});
+			  transactionResource = $resource('transactions/:ccId/', {ccId: '@_cardId'});
 			  
 			  return transactionResource.query({ccId:cardId}).$promise;
 		  }
