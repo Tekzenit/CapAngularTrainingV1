@@ -1,7 +1,7 @@
 <div class="custom-select-container" ng-class="{ show: listVisible }">
 	<div class="custom-select-display" ng-click="listVisible = !listVisible" ng-class="{ clicked: listVisible }">
 		<p class="small-7">
-			<img ng-if="!isPlaceholder" ng-src="images/{{display.image}}">
+			<img ng-if="!isPlaceholder" ng-src="images/{{selected.image}}">
 		</p>
 		<p class="small-5">
 			<span class="placeholder color-white down">{{placeholder}}</span>

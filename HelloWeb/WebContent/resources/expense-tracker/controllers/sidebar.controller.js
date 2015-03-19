@@ -1,8 +1,7 @@
 (function () {
 
-  var SidebarController;
-  var injectParams = ['$scope', 'customersService', 'sharedDataService'];
-  SidebarController = function ($scope, customersService, sharedDataService) {
+  var injectParams = ['customersService'];
+  var sidebarController = function (customersService) {
     //use 'this' instead of $scope
     var vm = this;
     //hard coded for demo, in real production this would be passed through log in
@@ -10,22 +9,15 @@
     var customer = customersService.get({id: customerId}, function () {
       vm.customer = customer;
       vm.creditcards = customer.creditcards;
-
+      vm.creditcard = customer.creditcard[0];
     });
+
     vm.customers = customersService.query();
-
-    $scope.$watch(function () {
-      return sharedDataService.getCreditcard();
-    }, function (value) {
-      vm.creditcard = value;
-    });
-
   };
 
-  SidebarController.$inject = injectParams;
+  sidebarController.$inject = injectParams;
 
-  angular.module('expenseTracker')
-    .controller('sidebarController', SidebarController);
+  angular.module('expenseTracker').controller('sidebarController', sidebarController);
 
 })();
 

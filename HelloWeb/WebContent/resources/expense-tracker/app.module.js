@@ -37,21 +37,6 @@
         templateUrl: partialViewBase + 'statement-overview-transactions.html'
       });
   });
-  app.factory('sharedDataService', ['$rootScope', function ($rootScope) {
-// use this to share the selected credit card data to any controller
-    var creditcard = {};
-    return {
-      getCreditcard: function () {
-        return creditcard;
-      },
-      setCreditcard: function (value) {
-        creditcard = value;
-        
-        //Notify the controllers that we changed the credit card
-        $rootScope.$broadcast('ccChanged', creditcard);
-      }
-    };
-  }]);
 })();
 
 
