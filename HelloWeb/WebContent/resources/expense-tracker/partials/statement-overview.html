@@ -1,62 +1,54 @@
 
 <!-- Statement overview -->
-                <div class="row">
-                    <h4 class="small-12 columns content">
-                        OVERVIEW 
-                        <span ng-show="false"> Total: </span>
-                        <span class="right">Statement Total
-                            <span class="price">$1,288.21</span>
-                        </span>
-                    </h4>
-                    <div class="small-12 columns">
-                        <div class="right">
-                            <a href="#" class="underline">View Balance Details</a>
-                            <a href="#" class="button success small">Make a Payment</a>
-                        </div>
-                        <tabset>
-                            <!-- Categories -->
-                            <tab select="loadCategories()">
-                                <tab-heading class="button small">
-                                    Categories
-                                </tab-heading>
-                                <div class="categories">
-                                    <div class="category icon icon-gas">
-                                        <a href="#" class="h5">Gas and Car<span class="right">$26.55</span></a>
-                                    </div>
-                                    <div class="category icon icon-groceries">
-                                        <a href="#" class="h5">Groceries<span class="right">$94.08</span></a>
-                                    </div>
-                                    <div class="category icon icon-nightlife">
-                                        <a href="#" class="h5">Nightlife<span class="right">$74.04</span></a>
-                                    </div>
-                                    <div class="category icon icon-rent">
-                                        <a href="#" class="h5">Rent<span class="right">$879.00</span></a>
-                                    </div>
-                                    <div class="category icon icon-restaurants">
-                                        <a href="#" class="h5">Restaurants<span class="right">$18.29</span></a>
-                                    </div>
-                                    <div class="category icon icon-shopping">
-                                        <a href="#" class="h5">Shopping<span class="right">$81.10</span></a>
-                                    </div>
-                                    <div class="category icon icon-travel">
-                                        <a href="#" class="h5">Travel<span class="right">$0</span></a>
-                                    </div>
-                                    <div class="category icon icon-utilities">
-                                        <a href="#" class="h5">Utilities<span class="right">$115.15</span></a>
-                                    </div>
-                                </div>
-                            </tab>
-                            <!-- /Categories -->
-
-                            <!-- Transactions -->
-                            <tab select="loadTransactions()">
-                                <tab-heading class="button small">
-                                    Transactions
-                                </tab-heading>
-                                <div ng-include="'expense-tracker/partials/transactions.html'"></div>
-                            </tab>
-                            <!-- /Transactions -->
-                        </tabset>
-                    </div>
-                </div>
+<div class="row">
+	<h4 class="small-12 columns content">
+		OVERVIEW <span ng-show="false"> Total: </span> <span class="right">Statement
+			Total <span class="price">$1,288.21</span>
+		</span>
+	</h4>
+	<div class="small-12 columns">
+		<div class="right">
+			<a href="#" class="underline">View Balance Details</a> <a href="#"
+				class="button success small">Make a Payment</a>
+		</div>
+		<tabset> <!-- Categories --> <tab select="loadCategories()">
+		<tab-heading class="button small"> Categories </tab-heading>
+		<div class="categories">
+			<div class="category icon icon-gas">
+				<a href="#" class="h5">Gas and Car<span class="right">$26.55</span></a>
+			</div>
+			<div class="category icon icon-groceries">
+				<a href="#" class="h5">Groceries<span class="right">$94.08</span></a>
+			</div>
+			<div class="category icon icon-nightlife">
+				<a href="#" class="h5">Nightlife<span class="right">$74.04</span></a>
+			</div>
+			<div class="category icon icon-rent">
+				<a href="#" class="h5">Rent<span class="right">$879.00</span></a>
+			</div>
+			<div class="category icon icon-restaurants">
+				<a href="#" class="h5">Restaurants<span class="right">$18.29</span></a>
+			</div>
+			<div class="category icon icon-shopping">
+				<a href="#" class="h5">Shopping<span class="right">$81.10</span></a>
+			</div>
+			<div class="category icon icon-travel">
+				<a href="#" class="h5">Travel<span class="right">$0</span></a>
+			</div>
+			<div class="category icon icon-utilities">
+				<a href="#" class="h5">Utilities<span class="right">$115.15</span></a>
+			</div>
+		</div>
+		</tab> 
+		<!-- /Categories --> 
+		
+		<!-- Transactions --> 
+		<tab select="loadTransactions()">
+			<tab-heading class="button small">Transactions </tab-heading>
+			<div ng-include="'expense-tracker/partials/transactions.html'"></div>
+		</tab> 
+		<!-- /Transactions --> 
+		</tabset>
+	</div>
+</div>
 <!-- /Statement overView -->

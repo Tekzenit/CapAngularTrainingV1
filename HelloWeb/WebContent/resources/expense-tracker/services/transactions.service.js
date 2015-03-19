@@ -8,7 +8,7 @@
    
 	  var tranService = {
 		  		  
-		  GetTransactionByCreditCard : function(cardId) {
+		  getTransactionByCreditCard : function(cardId) {
 			  transactionResource = $resource('transactions/:ccId/', {ccId: '@_cardId'});
 			  
 			  return transactionResource.query({ccId:cardId}).$promise;

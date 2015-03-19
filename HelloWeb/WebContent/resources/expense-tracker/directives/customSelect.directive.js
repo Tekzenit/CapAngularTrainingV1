@@ -20,7 +20,7 @@
 					$scope.selected = item;
 				};
 
-				scope.isSelected = function(item) {
+				$scope.isSelected = function(item) {
 					return item === $scope.selected;
 				};
 			}
