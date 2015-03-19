@@ -9,10 +9,10 @@
 
 			var transactionList = [];
 
-			transactionsService.getTransactionByCreditCard(cc.id)
+			/*transactionsService.getTransactionByCreditCard(cc.id)
 				.then(function(transactions) {
 					transactionList = transactions;
-				});
+				});*/
 			
 			vm.chartConfig = {
 				options : {
