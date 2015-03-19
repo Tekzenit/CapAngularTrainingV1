@@ -1,30 +1,30 @@
 <!-- transactions -->
-    <table ng-table="tableParams" class="table small-12 ">
-        <tr ng-repeat="transaction in $data">
+    <table class="table small-12 ">
+        <tr>
             <td data-title="'Description'">
-                <span ng-if="!transaction.isEditing">{{transaction.description}}</span>
+                <span>Tran Desc</span>
 
-                <div ng-if="transaction.isEditing"><input class="form-control" type="text" ng-model="transaction.description"/></div>
+                <div><input class="form-control" type="text" /></div>
             </td>
             <td data-title="'Date'" width="200">
-                <span ng-if="!transaction.isEditing">{{transaction.date | date : format : short  }}</span>
+                <span>Date</span>
 
-                <div ng-if="transaction.isEditing"><input class="form-control" type="text" ng-model="transaction.date"/></div>
+                <div><input class="form-control" type="text" /></div>
             </td>
             <td data-title="'Category'" width="200">
-                <span ng-if="!transaction.isEditing">{{transaction.category }}</span>
+                <span>Category</span>
 
-                <div ng-if="transaction.isEditing">
-                    <select class="form-control" ng-model="transaction.category" ng-options="c as c for c in vm.categories">
+                <div >
+                    <select class="form-control">
                     </select>
                 </div>
             </td>
             <td data-title="'Amount'" width="200">
-                <span>{{transaction.amount | currency  }}</span>
+                <span>Amount</span>
             </td>
             <td data-title="'Actions'" width="200">
-                <a ng-if="!transaction.isEditing" href="" class="btn btn-default btn-xs" ng-click="transaction.isEditing = true">Edit</a>
-                <a ng-if="transaction.isEditing" href="" class="btn btn-primary btn-xs" ng-click="vm.save(transaction)">Save</a>
+                <a href="" class="btn btn-default btn-xs">Edit</a>
+                <a href="" class="btn btn-primary btn-xs">Save</a>
             </td>
         </tr>
     </table>
